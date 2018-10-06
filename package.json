@@ -1,0 +1,19 @@
+{
+  "name": "FFDevTools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mrluissan/FFDevTools.git",
+  "author": "Luis Adame <mrluissan@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "parcel app/index.html --out-dir docs",
+    "prod": "parcel build app/index.html --out-dir docs"
+  },
+  "dependencies": {
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.4"
+  }
+}
