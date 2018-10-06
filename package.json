@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "parcel app/index.html --out-dir docs",
-    "prod": "parcel build app/index.html --out-dir docs"
+    "dev": "parcel app/index.html -d docs",
+    "prod": "parcel build app/index.html -d docs --public-url https://mrluissan.github.io/FFDevTools/ --no-source-maps --no-content-hash --experimental-scope-hoisting"
   },
   "dependencies": {
     "turbolinks": "^5.2.0"
