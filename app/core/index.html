@@ -12,8 +12,21 @@
 
 <body>
     <h1>The Core Tools</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="#inspector">The page inspector</a>
+            </li>
+            <li>
+                <a href="#debugger">The javascript debugger</a>
+            </li>
+            <li>
+                <a href="#network">The network monitor</a>
+            </li>
+        </ul>
+    </nav>
     <section>
-        <h2>The page inspector</h2>
+        <h2 id="inspector">The page inspector</h2>
         <p>
             With the page inspector you can view and change page content and layout. You can get vital information from
             the page visual behaviour such as the box model, animations and grid layouts.
@@ -68,6 +81,38 @@
             </p>
             <img src="../assets/img/Inspector_html_tree.png" alt="Page inspector's html tree">
         </article>
+    </section>
+    <section>
+        <h2 id="debugger">The javascript debugger</h2>
+        <p>The javascript debugger allows you to step through javascript code to see how it behaves step by step. You
+            can set breakpoints to stop the execution in that line. Also, you can add conditional breakpoints, that is
+            that if a condition is true then the debugger will stop the execution right there. Furthermore, you can
+            step into functions when you are debugging, this is the expected behaviour but sometimes you want to step
+            over a function because you know it doesn't contain bugs. </p>
+        <p>In this video you can see the full feature set of this tool:</p>
+        <video controls src="../assets/video/debugger.mp4"></video>
+        <p>In the video before it's explained how to:</p>
+        <ul>
+            <li>Set a breakpoint</li>
+            <li>Set a conditional breakpoint</li>
+            <li>Step over and into the code</li>
+            <li>Stop on exceptions</li>
+        </ul>
+        <p>However, this is not all, the debugger provides information at any state of the execution, this means that
+            when we are stepping through the code we can place the cursor over variables to see their current value.
+            For example, in the script shown in the video we can check the value of the <code>counter</code> variable
+            hovering it in the code, in this case it will be equals to 4 because we were in the fourth call.</p>
+        <img src="../assets/img/debugger_hover.png" alt="We can see the that variable counter equals 4 when the cursor it's placed over it">
+        <p>If we had placed the cursor over the
+            <code>document</code> object we've had seen all of its properties.</p>
+    </section>
+    <section>
+        <h2 id="network">The network monitor</h2>
+        <p>The network monitor is one of the most important tools regarding optimization. We can see all the documents,
+            assets, stylesheets, scripts, fonts, service workers, etc... That are being loaded. It shows their current
+            state, for example if an image is being downloaded.</p>
+        <p>Furthermore, it shows the best information about a page: its size and time to load.</p>
+        <img src="../assets/img/page_size_and_time.png" alt="It shows the size and time to load of a web page.">
     </section>
 
 </body>
