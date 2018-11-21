@@ -65,8 +65,16 @@
                     Examine and edit CSS
                 </a>
             </li>
-            <li>Examine event listeners</li>
-            <li>Work with animations</li>
+            <li>
+                <a href="#examine-event-listeners">
+                    Examine event listeners
+                </a>
+            </li>
+            <li>
+                <a href="#work-with-animations">
+                    Work with animations
+                </a>
+            </li>
             <li>Edit CSS filters</li>
             <li>Edit CSS shapes</li>
             <li>View background images</li>
@@ -153,6 +161,53 @@
             <p>As we've seen in other tools, CSS rules can be seen by selecting an element of the page, which can be
                 done by clicking throught the inspector, or by right clicking on the page.</p>
             <video onloadstart="this.volume=0.5" controls src="../assets/video/edit-css-rules.mp4"></video>
+        </article>
+        <article id="examine-event-listeners">
+            <h4>Examine Event Listeners</h4>
+            <p>
+                Usually we use javascript to bind some events to html elements, i.e: clicking a button and handle that
+                click event with javascript, in order to see if that element or elements have actually a binded event
+                we can open the dev tools and look for the event tag at the right side of the node. You can see it in
+                action in the video below.
+            </p>
+            <video muted controls src="../assets/video/examine-event-listeners.mp4"></video>
+        </article>
+        <article id="work-with-animations">
+            <h4>Work with animations</h4>
+            <video controls muted src="../assets/video/animations.mp4"></video>
+            <p>
+                As you can see in the video, he first thing we can see is that in the css ruels panel there is an
+                specification of the keyframes used for the animation. And we can edit the keyframes right there.
+            </p>
+            <p>
+                On the right panel there is a detailed visualization of the animation that is being done.
+                We can see that first there is a toolbar where there are two buttons for controlling the animation
+                playing. We can go back to the firs keyframe or replaying the animation again by pressing the play
+                button. Also, we have a selectionof speed to change the animation speed and a timestamp of the current
+                time of the animation.
+            </p>
+            <p>
+                Next, we have the graphics, displaying first the node that is being animated and being able to show
+                that element on the page. And, on the right side it is shown the animation chart. These charts are
+                colored in three different colors depending on which type of animation is: an animation made by a
+                <strong>transition property</strong>, using <strong>@keyframes animation</strong>, and finally those
+                animations made with the <strong>Web Animations API</strong>. These are colored respectiveley: blue,
+                orange, and green.
+                These charts are shaped in a way that show how that animation was timed, i.e: if it used an easy
+                timing, or different.
+            </p>
+            <p>
+                Furthermore, if we click on the animation chart a new panel is gonna be displayed under it, and it will
+                show all the animated properties for that animation along with the keyframes points where that property
+                is being changed. You can see the value that takes tha property in that moment by hovering it.
+            </p>
+            <p>
+                Finally, in the property names there are some hints about that property performance. If it has a
+                lightning icon it means it was controlled by the animation compositor which is much more performant.
+                These are related to what events do these properties fire like painting, recalculation and compositing,
+                which is something out of the scope.
+                However, this tool will inform us about the performance of the animation.
+            </p>
         </article>
     </section>
     <section>
