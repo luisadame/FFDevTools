@@ -86,6 +86,10 @@
         <article id="box-model">
             <h4>Showing and edit the box model</h4>
             <video src="../assets/video/box-model.mp4"></video>
+            <p>As shown in the video: first we'll open the firefox dev tools, stay in the inspector tool, and click on
+                the tab which is located in the right side panel, named: <i>layout</i>. Then in will appear the box
+                model section where you can see the properties of that element that affect the box model. And you'll be
+                able to edit them from there just by double clicking de values.</p>
         </article>
     </section>
     <section>
@@ -119,23 +123,36 @@
             state, for example if an image is being downloaded.</p>
         <p>Furthermore, it shows the best information about a page: its size and time to load.</p>
         <img src="../assets/img/page_size_and_time.png" alt="It shows the size and time to load of a web page.">
-        <p>You can examine all of the assets that have been loaded or are being downloaded in its main panel, it will look like this:</p>
+        <p>You can examine all of the assets that have been loaded or are being downloaded in its main panel, it will
+            look like this:</p>
         <img src="../assets/img/network_monitor_main_panel.png" alt="It shows information about the assets loaded for the webpage.">
         <p>
-            Here, you can get precios information about the assets loaded. The request status, the method used to get the asset, the name of the file, the domain of the file, the type of file (img, script, etc); the cause such as websockets, worker, document, etc; the data transferred and the real size and the graphical cascade with stages of files being showed (parsed, executed and so). All in all, this is one of the best features in developer tools because it allows you to debug assets requests and optimize the load of your web page.
+            Here, you can get precios information about the assets loaded. The request status, the method used to get
+            the asset, the name of the file, the domain of the file, the type of file (img, script, etc); the cause
+            such as websockets, worker, document, etc; the data transferred and the real size and the graphical cascade
+            with stages of files being showed (parsed, executed and so). All in all, this is one of the best features
+            in developer tools because it allows you to debug assets requests and optimize the load of your web page.
         </p>
         <h3>Filtering</h3>
-        <p>Some pages will load up to 50 assets or more, and scrolling through them to find the one we are looking for it's a time consuming task. The network monitor offers a solution for this, which is at the top left side and it looks like this:</p>
+        <p>Some pages will load up to 50 assets or more, and scrolling through them to find the one we are looking for
+            it's a time consuming task. The network monitor offers a solution for this, which is at the top left side
+            and it looks like this:</p>
         <img src="../assets/img/network_monitor_filter.png" alt="Filter tool to filter requests">
-        <p>However, if you feel like no typing, you can use the options at side which let you filter by document type, for example: HTML, CSS, Images, Ajax, etc...</p>
+        <p>However, if you feel like no typing, you can use the options at side which let you filter by document type,
+            for example: HTML, CSS, Images, Ajax, etc...</p>
         <img src="../assets/img/network_monitor_document_select.png" alt="Choose the document type you want to filter by">
         <h3>Asset details</h3>
-        <p>We've gotten information about the file we want, but we need to know the cookies that are attached to that request, how can we know that?</p>
-        <p>Well, when we have found our asset we need to click on it and a panel will open on the right side of the main panel. It will show more information about that request, for example we can navigate through the tabs in that panel, these are: Headers, Cookies, Params, Response, Timings, Stack Trace, and Security.</p>
+        <p>We've gotten information about the file we want, but we need to know the cookies that are attached to that
+            request, how can we know that?</p>
+        <p>Well, when we have found our asset we need to click on it and a panel will open on the right side of the
+            main panel. It will show more information about that request, for example we can navigate through the tabs
+            in that panel, these are: Headers, Cookies, Params, Response, Timings, Stack Trace, and Security.</p>
         <img src="../assets/img/network_monitor_detail_page.png" alt="Request detail panel">
         <h4>Headers</h4>
         <p>
-            As you can see in the header tab, there is information about the response headers, for example if we want to see the <code>Content-Encoding</code> it will be reflected there. These are the headers attached in the response.
+            As you can see in the header tab, there is information about the response headers, for example if we want
+            to see the <code>Content-Encoding</code> it will be reflected there. These are the headers attached in the
+            response.
             It is included in this panel:
             <ul>
                 <li>Request url</li>
@@ -159,29 +176,38 @@
                     </tr>
                     <tr>
                         <td>Content-Encoding</td>
-                        <td>This will inform the browser which compression algorithm was used to compress the fiel sent.</td>
+                        <td>This will inform the browser which compression algorithm was used to compress the fiel
+                            sent.</td>
                     </tr>
                     <tr>
                         <td>content-type</td>
-                        <td>This informs the browser with the asset mime type and the browser will use this information to cateogrize the request and parse it correctly.</td>
+                        <td>This informs the browser with the asset mime type and the browser will use this information
+                            to cateogrize the request and parse it correctly.</td>
                     </tr>
                 </tbody>
             </table>
-            There are much more headers that can be seen here: <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields">List of HTTP header fields - wikipedia</a>
+            There are much more headers that can be seen here: <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields">List
+                of HTTP header fields - wikipedia</a>
         </p>
         <p>
-            Also, you can examine the headers attached to your request, there it you can see for example your user agent which will inform the page you are accessing of the browser that you are using.
+            Also, you can examine the headers attached to your request, there it you can see for example your user
+            agent which will inform the page you are accessing of the browser that you are using.
         </p>
         <h4>Cookies</h4>
         <p>
-            As in the headers, we get two panels: the request cookies and response. This is pretty straightforward, we get information about the cookies you send to the server requested, and you'll see the cookies sent back from the server.
+            As in the headers, we get two panels: the request cookies and response. This is pretty straightforward, we
+            get information about the cookies you send to the server requested, and you'll see the cookies sent back
+            from the server.
         </p>
         <h4>Params</h4>
-        <p>This one is pretty useful if you work with forms, you could see here the parameters sent through a form and they'll be displayed nicely there.</p>
+        <p>This one is pretty useful if you work with forms, you could see here the parameters sent through a form and
+            they'll be displayed nicely there.</p>
         <h4>Response</h4>
-        <p>In this section you can see the response sent back from the server, if it is an html page, you can see the html code and a little preview, this would work with other files such as images, scripts and more...</p>
+        <p>In this section you can see the response sent back from the server, if it is an html page, you can see the
+            html code and a little preview, this would work with other files such as images, scripts and more...</p>
         <h4>Timings</h4>
-        <p>It will show a little graph with information about the trace of an asset through the network phases, for example to retrieve an image from the server there will be these steps:</p>
+        <p>It will show a little graph with information about the trace of an asset through the network phases, for
+            example to retrieve an image from the server there will be these steps:</p>
         <table border="1">
             <thead>
                 <td>Name</td>
@@ -192,9 +218,12 @@
                     <td>Blocked</td>
                     <td>Time spent in a queue waiting for a network connection.
 
-                    The browser imposes a limit on the number of simultaneous connections that can be made to a single server. In Firefox
-                    this defaults to 6, but can be changed using the network.http.max-persistent-connections-per-server preference. If all
-                    connections are in use, the browser can't download more resources until a connection is released.</td>
+                        The browser imposes a limit on the number of simultaneous connections that can be made to a
+                        single server. In Firefox
+                        this defaults to 6, but can be changed using the
+                        network.http.max-persistent-connections-per-server preference. If all
+                        connections are in use, the browser can't download more resources until a connection is
+                        released.</td>
                 </tr>
                 <tr>
                     <td>Dns Resolution</td>
@@ -218,10 +247,11 @@
                 </tr>
             </tbody>
         </table>
-    <h4>Security</h4>
-    <p>If the site runs https this will appear on the options and it will show detauls about the connection such as the protocol, the cipher and certificate details.</p>
-    <h4>Stack trace</h4>
-    <p>An stack trace will be shown with information of where the request was initially made.</p>
+        <h4>Security</h4>
+        <p>If the site runs https this will appear on the options and it will show detauls about the connection such as
+            the protocol, the cipher and certificate details.</p>
+        <h4>Stack trace</h4>
+        <p>An stack trace will be shown with information of where the request was initially made.</p>
     </section>
 
 </body>

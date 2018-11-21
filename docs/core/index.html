@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Core Tools - Firefox Developer Tools</title>
+    <link rel="stylesheet" href="/app.ed7d1cf1.css">
+    <script src="/app.c3f9f951.js"></script>
+</head>
+
+<body>
+    <h1>The Core Tools</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="#inspector">The page inspector</a>
+            </li>
+            <li>
+                <a href="#debugger">The javascript debugger</a>
+            </li>
+            <li>
+                <a href="#network">The network monitor</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <h2 id="inspector">The page inspector</h2>
+        <p>
+            With the page inspector you can view and change page content and layout. You can get vital information from
+            the page visual behaviour such as the box model, animations and grid layouts.
+        </p>
+        <img src="/Page_inspector.a4574d04.png" alt="Page inspector screenshot">
+        <h3>Functionalities</h3>
+        <ul>
+            <li>
+                <a href="#html">Examine and edit HTML</a>
+            </li>
+            <li>
+                <a href="#box-model">Show and edit the box model of an element</a>
+            </li>
+            <li>Inspect and select colors</li>
+            <li>Change the position of elements</li>
+            <li>Edit fonts</li>
+            <li>Visualize transforms</li>
+            <li>Examine and edit CSS</li>
+            <li>Examine event listeners</li>
+            <li>Work with animations</li>
+            <li>Edit CSS filters</li>
+            <li>Edit CSS shapes</li>
+            <li>View background images</li>
+            <li>Use the inspector from the web console</li>
+            <li>Examine CSS grid layouts</li>
+        </ul>
+        <article id="html">
+            <h4>Examine and edit HTML</h4>
+            <p>
+                As we open the developer tools the first thing we encounter is the html pane which is positioned on the
+                left side of the tools.
+            </p>
+            <p>
+                We'll cover first the outer elements of the pane and then go into the most important element. At the
+                bottom we can see the breadcrumbs section from where the hierarchy of an element is displayed.
+            </p>
+            <img src="/Inspector_breadcrumbs.a993d9e2.png" alt="Page inspector breadcrumbs">
+            <p>Also at the top there is a toolbar with three options:
+                <ul>
+                    <li>Add a new node</li>
+                    <li>Search the html</li>
+                    <li>Grab color from page</li>
+                </ul>
+                The options are pretty self explained. The "add a new node" button allow us to create a new node in the
+                html tree. The "Search the html" gives us the option to look for an element in the html tree. Lastly,
+                the "grab a color from the page" is a tool for taking the color of a pixel from the page we are
+                inspecting.
+            </p>
+            <img src="/Inspector_search.f9e52285.png" alt="Page inspector search">
+            <p>
+                The last element is one of the most important for this tool. The <strong>HTML tree</strong> shows the
+                elements of a web page and their content. You can edit the html of a site using this tool. For example:
+                double clicking on an element makes it editable and we can change that html.
+            </p>
+            <img src="/Inspector_html_tree.0a9f031e.png" alt="Page inspector's html tree">
+        </article>
+        <article id="box-model">
+            <h4>Showing and edit the box model</h4>
+            <video src="/box-model.ec7bef18.mp4"></video>
+            <p>As shown in the video: first we'll open the firefox dev tools, stay in the inspector tool, and click on
+                the tab which is located in the right side panel, named: <i>layout</i>. Then in will appear the box
+                model section where you can see the properties of that element that affect the box model. And you'll be
+                able to edit them from there just by double clicking de values.</p>
+        </article>
+    </section>
+    <section>
+        <h2 id="debugger">The javascript debugger</h2>
+        <p>The javascript debugger allows you to step through javascript code to see how it behaves step by step. You
+            can set breakpoints to stop the execution in that line. Also, you can add conditional breakpoints, that is
+            that if a condition is true then the debugger will stop the execution right there. Furthermore, you can
+            step into functions when you are debugging, this is the expected behaviour but sometimes you want to step
+            over a function because you know it doesn't contain bugs. </p>
+        <p>In this video you can see the full feature set of this tool:</p>
+        <video controls="" src="/debugger.616076d3.mp4"></video>
+        <p>In the video before it's explained how to:</p>
+        <ul>
+            <li>Set a breakpoint</li>
+            <li>Set a conditional breakpoint</li>
+            <li>Step over and into the code</li>
+            <li>Stop on exceptions</li>
+        </ul>
+        <p>However, this is not all, the debugger provides information at any state of the execution, this means that
+            when we are stepping through the code we can place the cursor over variables to see their current value.
+            For example, in the script shown in the video we can check the value of the <code>counter</code> variable
+            hovering it in the code, in this case it will be equals to 4 because we were in the fourth call.</p>
+        <img src="/debugger_hover.b2b8f1aa.png" alt="We can see the that variable counter equals 4 when the cursor it's placed over it">
+        <p>If we had placed the cursor over the
+            <code>document</code> object we've had seen all of its properties.</p>
+    </section>
+    <section>
+        <h2 id="network">The network monitor</h2>
+        <p>The network monitor is one of the most important tools regarding optimization. We can see all the documents,
+            assets, stylesheets, scripts, fonts, service workers, etc... That are being loaded. It shows their current
+            state, for example if an image is being downloaded.</p>
+        <p>Furthermore, it shows the best information about a page: its size and time to load.</p>
+        <img src="/page_size_and_time.70b8ca9d.png" alt="It shows the size and time to load of a web page.">
+        <p>You can examine all of the assets that have been loaded or are being downloaded in its main panel, it will
+            look like this:</p>
+        <img src="/network_monitor_main_panel.8998a0cf.png" alt="It shows information about the assets loaded for the webpage.">
+        <p>
+            Here, you can get precios information about the assets loaded. The request status, the method used to get
+            the asset, the name of the file, the domain of the file, the type of file (img, script, etc); the cause
+            such as websockets, worker, document, etc; the data transferred and the real size and the graphical cascade
+            with stages of files being showed (parsed, executed and so). All in all, this is one of the best features
+            in developer tools because it allows you to debug assets requests and optimize the load of your web page.
+        </p>
+        <h3>Filtering</h3>
+        <p>Some pages will load up to 50 assets or more, and scrolling through them to find the one we are looking for
+            it's a time consuming task. The network monitor offers a solution for this, which is at the top left side
+            and it looks like this:</p>
+        <img src="/network_monitor_filter.5ace36d0.png" alt="Filter tool to filter requests">
+        <p>However, if you feel like no typing, you can use the options at side which let you filter by document type,
+            for example: HTML, CSS, Images, Ajax, etc...</p>
+        <img src="/network_monitor_document_select.dcec2816.png" alt="Choose the document type you want to filter by">
+        <h3>Asset details</h3>
+        <p>We've gotten information about the file we want, but we need to know the cookies that are attached to that
+            request, how can we know that?</p>
+        <p>Well, when we have found our asset we need to click on it and a panel will open on the right side of the
+            main panel. It will show more information about that request, for example we can navigate through the tabs
+            in that panel, these are: Headers, Cookies, Params, Response, Timings, Stack Trace, and Security.</p>
+        <img src="/network_monitor_detail_page.f093dbe0.png" alt="Request detail panel">
+        <h4>Headers</h4>
+        <p>
+            As you can see in the header tab, there is information about the response headers, for example if we want
+            to see the <code>Content-Encoding</code> it will be reflected there. These are the headers attached in the
+            response.
+            It is included in this panel:
+            <ul>
+                <li>Request url</li>
+                <li>Request method</li>
+                <li>Remote ip address and port</li>
+                <li>Status code</li>
+                <li>The http request and headers sent</li>
+                <li>A button to edit and resend the request</li>
+                <li>And a raw headers button which will display the raw request and response headers (not formatted)</li>
+            </ul>
+            Popuplar headers are:
+            <table border="1">
+                <thead>
+                    </thead><td>Name</td>
+                    <td>Description</td>
+                
+                <tbody>
+                    <tr>
+                        <td>cache-control</td>
+                        <td>This header will inform the browser for how long can this asset be cached until refreshed.</td>
+                    </tr>
+                    <tr>
+                        <td>Content-Encoding</td>
+                        <td>This will inform the browser which compression algorithm was used to compress the fiel
+                            sent.</td>
+                    </tr>
+                    <tr>
+                        <td>content-type</td>
+                        <td>This informs the browser with the asset mime type and the browser will use this information
+                            to cateogrize the request and parse it correctly.</td>
+                    </tr>
+                </tbody>
+            </table>
+            There are much more headers that can be seen here: <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields">List
+                of HTTP header fields - wikipedia</a>
+        </p>
+        <p>
+            Also, you can examine the headers attached to your request, there it you can see for example your user
+            agent which will inform the page you are accessing of the browser that you are using.
+        </p>
+        <h4>Cookies</h4>
+        <p>
+            As in the headers, we get two panels: the request cookies and response. This is pretty straightforward, we
+            get information about the cookies you send to the server requested, and you'll see the cookies sent back
+            from the server.
+        </p>
+        <h4>Params</h4>
+        <p>This one is pretty useful if you work with forms, you could see here the parameters sent through a form and
+            they'll be displayed nicely there.</p>
+        <h4>Response</h4>
+        <p>In this section you can see the response sent back from the server, if it is an html page, you can see the
+            html code and a little preview, this would work with other files such as images, scripts and more...</p>
+        <h4>Timings</h4>
+        <p>It will show a little graph with information about the trace of an asset through the network phases, for
+            example to retrieve an image from the server there will be these steps:</p>
+        <table border="1">
+            <thead>
+                </thead><td>Name</td>
+                <td>Description</td>
+            
+            <tbody>
+                <tr>
+                    <td>Blocked</td>
+                    <td>Time spent in a queue waiting for a network connection.
+
+                        The browser imposes a limit on the number of simultaneous connections that can be made to a
+                        single server. In Firefox
+                        this defaults to 6, but can be changed using the
+                        network.http.max-persistent-connections-per-server preference. If all
+                        connections are in use, the browser can't download more resources until a connection is
+                        released.</td>
+                </tr>
+                <tr>
+                    <td>Dns Resolution</td>
+                    <td>Time taken to resolve a host name.</td>
+                </tr>
+                <tr>
+                    <td>Connecting</td>
+                    <td>Time taken to create a TCP connection.</td>
+                </tr>
+                <tr>
+                    <td>Sending</td>
+                    <td>Time taken to send the HTTP request to the server.</td>
+                </tr>
+                <tr>
+                    <td>Waiting</td>
+                    <td>Waiting for a response from the server.</td>
+                </tr>
+                <tr>
+                    <td>Receiving</td>
+                    <td>Time taken to read the entire response from the server (or cache).</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Security</h4>
+        <p>If the site runs https this will appear on the options and it will show detauls about the connection such as
+            the protocol, the cipher and certificate details.</p>
+        <h4>Stack trace</h4>
+        <p>An stack trace will be shown with information of where the request was initially made.</p>
+    </section>
+
+</body>
+
+</html>
