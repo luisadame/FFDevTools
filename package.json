@@ -11,6 +11,7 @@
     "prod": "parcel build app/index.html -d docs --public-url https://mrluissan.github.io/FFDevTools/ --no-source-maps --no-content-hash --experimental-scope-hoisting"
   },
   "dependencies": {
+    "luminous-lightbox": "^2.3.1",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
