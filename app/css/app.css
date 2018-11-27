@@ -1,15 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Nunito');
+
 body {
+    font-family: 'Lora', serif;
     min-height: 100vh;
+    color: #333;
+    padding-bottom: 3em;
+    font-size: 18px;
+    line-height: 1.45;
+    margin: 0 auto;
+    width: 95%;
+    letter-spacing: -.001em;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #111;
+    margin: 2rem 0 10px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+section,
+article {
+    display: flex;
+    flex-direction: column;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    cursor: zoom-in;
 }
 
+.lum-lightbox-inner img {
+    display: initial !important;
+}
+
+img,
 video {
+    align-self: center;
+    box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .4);
     max-width: 100%;
     height: auto;
-    width: 720px;
+    margin: 1em 0;
     display: block;
+}
+
+ul {
+    list-style: georgian;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    body {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        width: 47%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    body {
+        width: 40%;
+    }
 }
